@@ -41,51 +41,6 @@ void PrintArray(int[,] array)
 
 void SortedRowsByMaxIn2dArray(int[,] array)
 {
-    //ЭТО РАБОТАЕТ, НО НЕ ОПТИМАЛЬНО (метод пузырька)
-    // int temp;
-    // Console.WriteLine("НАЧАЛО");
-    // Console.WriteLine();
-    // for (int i = 0; i < array.GetLength(0); i++)
-    // {
-    //     Console.WriteLine($"Строка: {i}");
-    //     for (int j = 0; j < array.GetLength(1); j++)
-    //     {
-    //         // for (int k = j; k < array.GetLength(1) - 1; k++)
-    //         for (int k = 0; k < array.GetLength(1) - 1; k++)            
-    //         {
-    //             Console.Write($"{k}: ");
-    //             if (array[i, k] < array[i, k + 1])
-    //             {
-    //                 temp = array[i, k];
-    //                 array[i, k] = array[i, k + 1];
-    //                 array[i, k + 1] = temp;
-    //                 //
-    //                 for (int p = 0; p < array.GetLength(1); p++)
-    //                     Console.Write($"{array[i, p]} ");
-    //                 Console.Write($" обмен {k} и {k + 1}");
-    //                 Console.WriteLine();
-    //                 //
-    //             }
-    //             else
-    //             {
-    //                 //
-    //                 for (int p = 0; p < array.GetLength(1); p++)
-    //                     Console.Write($"{array[i, p]} ");
-    //                 Console.Write($" {k} и {k + 1}");                        
-    //                 Console.WriteLine();
-    //                 //
-    //             }
-    //         }
-    //         Console.WriteLine($"С {j + 1} позиции---------");                        
-    //     }
-    //     Console.WriteLine($"Конец строки: {i}");
-    //     Console.WriteLine();
-    //     Console.WriteLine();                
-    // }
-    // Console.WriteLine();
-    // Console.WriteLine("КОНЕЦ");
-    //ЭТО РАБОТАЕТ, НО НЕ ОПТИМАЛЬНО (метод пузырька)
-
     int localMax, localMaxColumn;
     for (int i = 0; i < array.GetLength(0); i++)
         for (int j = 0; j < array.GetLength(1); j++)
@@ -117,4 +72,3 @@ PrintArray(myArray);
 SortedRowsByMaxIn2dArray(myArray);
 
 PrintArray(myArray);
-// !!Работает, сделать красиво...
