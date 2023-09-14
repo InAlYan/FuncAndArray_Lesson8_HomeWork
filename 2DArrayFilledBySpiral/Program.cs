@@ -84,7 +84,7 @@ void PrintArray(int[,] array)
     Console.WriteLine();
 }
 
-System.Console.Clear();
+Console.Clear();
 int n = InputNumber("Введите количество строк: ");
 int m = InputNumber("Введите количество столбцов: ");
 Console.WriteLine();

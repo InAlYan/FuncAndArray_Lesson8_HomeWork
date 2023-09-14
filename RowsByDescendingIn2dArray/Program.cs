@@ -67,8 +67,10 @@ int min = InputNumber("Минимальное значение в массиве
 int max = InputNumber("Максимальное значение в массиве: ");
 int[,] myArray = CreateArray(n, m);
 Fill2dArray(myArray, min, max);
+Console.WriteLine("Исходный массив: ");
 PrintArray(myArray);
 
 SortedRowsByMaxIn2dArray(myArray);
 
+Console.WriteLine("Упорядоченный массив: ");
 PrintArray(myArray);

@@ -1,4 +1,5 @@
-﻿// Задача 60. ...Сформируйте трёхмерный массив из неповторяющихся двузначных чисел. Напишите программу, которая будет построчно выводить массив, добавляя индексы каждого элемента.
+﻿// Задача 60. ...Сформируйте трёхмерный массив из неповторяющихся двузначных чисел. Напишите программу, которая будет построчно выводить массив,
+// добавляя индексы каждого элемента.
 // Массив размером 2 x 2 x 2
 // 66(0,0,0) 25(0,1,0)
 // 34(1,0,0) 41(1,1,0)
@@ -90,8 +91,8 @@ void Print3DArray(int[,,] array)
     {
         for (int j = 0; j < array.GetLength(1); j++)
         {
-            for (int k = 0; k < array.GetLength(2); k++)
-                Console.Write($"{array[i, j, k]}({i},{j},{k}) ");
+            for (int k = 0; k < array.GetLength(2); k++)                    
+                Console.Write($"{array[j, k, i]}({j},{k},{i}) ");
             Console.WriteLine();
         }
         Console.WriteLine();
@@ -99,6 +100,7 @@ void Print3DArray(int[,,] array)
     Console.WriteLine();
 }
 
+Console.Clear();
 int x = InputNumber("Введите количество измерений по оси x: ");
 int y = InputNumber("Введите количество измерений по оси y: ");
 int z = InputNumber("Введите количество измерений по оси z: ");
@@ -108,11 +110,6 @@ int[,,] myArray = Create3DArray(x, y, z);
 Fill3DArrayByRandom(myArray, 10, 99);
 Console.WriteLine("МАССИВ ЗАПОЛНЕННЫЙ СЛУЧАЙНЫМ ОБРАЗОМ:");
 Print3DArray(myArray);
-
-int[,,] myArray1 = Create3DArray(x, y, z);
-Fill3DArrayLinear(myArray1, 10);
-Console.WriteLine("МАССИВ ЗАПОЛНЕННЫЙ ЛИНЕЙНО:");
-Print3DArray(myArray1);
 
 int[,,] myArray2 = Create3DArray(x, y, z);
 Mix3DArrayByRandom(myArray2, 10);

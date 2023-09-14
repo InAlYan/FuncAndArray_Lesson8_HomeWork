@@ -72,12 +72,14 @@ int[,] MatrixMultiplication(int[,] arr1, int[,] arr2)
     return multArray;
 }
 
+Console.Clear();
+
 int n = InputNumber("Введите количество строк: ");
 int m = InputNumber("Введите количество столбцов: ");
 int min = InputNumber("Минимальное значение в массиве: ");
 int max = InputNumber("Максимальное значение в массиве: ");
-int[,] myArray1 = CreateArray(n, m);
-Fill2dArray(myArray1, min, max);
+int[,] myArray = CreateArray(n, m);
+Fill2dArray(myArray, min, max);
 
 int n2 = InputNumber("Введите количество строк: ");
 int m2 = InputNumber("Введите количество столбцов: ");
@@ -86,8 +88,8 @@ int max2 = InputNumber("Максимальное значение в масси�
 int[,] myArray2 = CreateArray(n2, m2);
 Fill2dArray(myArray2, min2, max2);
 
-PrintArray(myArray1);
+PrintArray(myArray);
 PrintArray(myArray2);
 
-int[,] multMatrix = MatrixMultiplication(myArray1, myArray2);
+int[,] multMatrix = MatrixMultiplication(myArray, myArray2);
 PrintArray(multMatrix);
